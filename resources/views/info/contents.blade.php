@@ -4,7 +4,7 @@
     <section>
         <div class="titlebar">
             <h1>Cuentas por pagar (Conceptos)</h1>
-
+<a href="{{route('crear')}}">Añadir nuevo concepto</a>
         </div>
         @if ($message = Session::get('success'))
         <script type="text/javascript">
@@ -43,9 +43,6 @@
                     </a>
 
 
-                    <a href="{{route('crear')}}" class="btn btn-success" style="display: block;">
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 10h-10v-10h-4v10h-10v4h10v10h4v-10h10z"/></svg>
-                    </a>
 
 
                     <form action="{{route('delete', $data->id)}}" method="post">
