@@ -4,10 +4,10 @@
 
      <section>
         <div class="content-table" style="width:80%; overflow: auto; text-align: display: flex; justify-content: center;">
-<form action="{{route('store')}}" method="POST">
+<form action="{{route('store.provider')}}" method="POST">
 @csrf
         <div class="titlebar">
-            <h1>Añadir Concepto</h1>
+            <h1>Añadir nuevo proveedor</h1>
         </div>
     @if($errors->any)
         <script type="text/javascript">
@@ -28,16 +28,20 @@
         @endif
         <div class="card">
            <div>
-                <label>Descripción</label>
-                <textarea name="descripcion" cols="30" rows="10" required></textarea>
+                <label>Nombre del proveedor</label>
+                <input type="Text" name="provider" maxlength="20" required>
+                <label>Cédula o RNC</label>
+                <input type="number" name="identifier">
+                <label>Balance</label>
+                <input type="number" name="balance">
+                <label>tipo de persona</label>
+                <select name="person_type">
+                    <option value="Jurírica">Jurídica</option>
+                    <option value="Física">Física</option>
+                </select>
             </div>
            <div>
-                <label>Estado</label>
-                <select  name="status" id="" required>
-                    <option disabled selected>Seleccionar el estado</option>
-                    <option value="1">1</option>
-                    <option value="0">0</option>
-                </select>
+               
                 <hr>
            </div>
         </div>

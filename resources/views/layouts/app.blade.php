@@ -13,6 +13,13 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
     </head>
     <body>
+        <nav>
+            <ul>
+                <a href="{{route('home')}}"><li>Inicio (concepto)</li></a>
+                <a href="{{route('view.provider')}}"><li>Proveedores</li></a>
+                <a href="{{route('view.document')}}"><li>Documentos por pagar</li></a>
+            </ul>
+        </nav>
         @yield('content')
     </body>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>

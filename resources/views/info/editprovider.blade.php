@@ -5,11 +5,11 @@
 @section('content')
 <main class="container">
     <section>
-        <form action="{{'/update/' . $infoId->id}}" method="post">
+        <form action="{{'/updateProvider/' . $infoId->id}}" method="post">
             @csrf
             @method('PUT')
         <div class="titlebar">
-            <h1>Editar concepto</h1>
+            <h1>Editar Proveedores</h1>
         </div>
         @if($errors->any)
         <script type="text/javascript">
@@ -29,20 +29,32 @@
         </div>
         @endif
         <div class="card">
-            <div>
-                <label>Descripción</label>
-                <textarea name="descripcion" cols="30" rows="10" placeholder="{{$infoId->nombre}}" required></textarea>
+           <div>
+                <label>Nombre</label>
+                <input type="text" name="provider" value="{{$infoId->nombre}}" >
+                <label>tipo de persona</label>
+                <select name="person_type">
+                    <option value="Jurídica">Jurídica</option>
+                    <option value="Física">Física</option>
+                </select>
+                <label>Cédula o RNC</label>
+                <input type="number" name="identifier" value="{{$infoId->cedula_rnc}}">
+
+                <label>Balance</label>
+                <input type="number" name="balance" value="{{$infoId->balance}}">
+                
             </div>
            <div>
-                <label>Estado</label>
-                <select  name="status" id="" required>
-                    <option disabled selected>Seleccionar el estado</option>
+                <hr>
+                <label for="">Actualizar estado</label>
+                <select  name="status" id=""  required>
+                    <option disabled selected>Selecciona el estado</option>
                     <option value="1">1</option>
                     <option value="0">0</option>
+                    <option selected value="{{$infoId->estado}}">{{$infoId->estado}}</option>
                 </select>
                 <hr>
            </div>
-
         </div>
         <div class="titlebar">
             <h1></h1>
