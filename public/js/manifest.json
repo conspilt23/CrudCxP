@@ -1,0 +1,26 @@
+{
+  "resources/vue-client/src/main.js": {
+    "file": "assets/main-DafkFxnh.js",
+    "name": "main",
+    "src": "resources/vue-client/src/main.js",
+    "isEntry": true,
+    "dynamicImports": [
+      "resources/vue-client/src/views/AboutView.vue"
+    ],
+    "css": [
+      "assets/main-d8hP47ru.css"
+    ]
+  },
+  "resources/vue-client/src/views/AboutView.vue": {
+    "file": "assets/AboutView-C_TppaEj.js",
+    "name": "AboutView",
+    "src": "resources/vue-client/src/views/AboutView.vue",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/vue-client/src/main.js"
+    ],
+    "css": [
+      "assets/AboutView-DH1QHaTm.css"
+    ]
+  }
+}

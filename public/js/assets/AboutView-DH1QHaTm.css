@@ -1,0 +1,1 @@
+.about{@apply lg:min-h-screen lg:flex lg:items-center;}.about h1{@apply text-xl font-medium text-white;}

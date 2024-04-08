@@ -21,6 +21,8 @@
             </ul>
         </nav>
         @yield('content')
+        <script src="{{ mix('resources/vue-client/src/main.js') }}" type="module"></script>
     </body>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
 </html>

@@ -17,7 +17,6 @@ use Illuminate\Support\Facades\Route;
 //Inicio y crud de conceptos
 Route::get('/',[CrudController::class, 'index'])->name('home');
 
-
 Route::get('/crear', function() {
     return view('info.create');
 })->name('crear');
@@ -49,3 +48,8 @@ Route::get('/editarDocument/{id}', [CrudController::class, 'editarDocument'])->n
 Route::delete('/deleteDocument/{id}', [CrudController::class, 'deleteDocument'])->name('delete.document'); //Eliminar
 Route::put('/updateDocument/{infoId}', [CrudController::class, 'updateDocument'])->name('update.document'); //API para mandar datos a editar (logica)
 Route::post('/document/store', [CrudController::class, 'storeDocument'])->name('store.document'); //API para guardar datos
+
+//Asiento contable
+Route::get('/asientos', function() {
+    return view('info.asientos');
+})->name('asientos');
