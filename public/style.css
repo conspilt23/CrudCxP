@@ -70,6 +70,12 @@
     margin: 1rem 0 1.5rem;
     color: var(--primary-color);
   }*/
+
+  nav ul a, .titlebar a {
+    color: #fff;
+    font-size: 14px;
+    display: block;
+  }
   
   h1 {
     margin-top: 0.5em;

@@ -18,6 +18,7 @@
                 <a href="{{route('home')}}"><li>Inicio (concepto)</li></a>
                 <a href="{{route('view.provider')}}"><li>Proveedores</li></a>
                 <a href="{{route('view.document')}}"><li>Documentos por pagar</li></a>
+                <a href="{{route('view.asiento')}}"><li>Asientos contables</li></a>
             </ul>
         </nav>
         @yield('content')

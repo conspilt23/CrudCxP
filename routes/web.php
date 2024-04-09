@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AsientosContablesController;
 use App\Http\Controllers\CrudController;
 use Illuminate\Support\Facades\Route;
 
@@ -49,3 +50,13 @@ Route::get('/editarDocument/{id}', [CrudController::class, 'editarDocument'])->n
 Route::delete('/deleteDocument/{id}', [CrudController::class, 'deleteDocument'])->name('delete.document'); //Eliminar
 Route::put('/updateDocument/{infoId}', [CrudController::class, 'updateDocument'])->name('update.document'); //API para mandar datos a editar (logica)
 Route::post('/document/store', [CrudController::class, 'storeDocument'])->name('store.document'); //API para guardar datos
+
+
+//Crud de Asientos contables
+Route::get('/crud-asientos-contables', [AsientosContablesController::class, 'index'])->name('view.asiento');
+Route::get('/add-asientos-contables',function(){ return view('info.addAsiento');})->name('add.asiento');
+Route::delete('/deleteaAsiento/{id}', [AsientosContablesController::class, 'delete'])->name('delete.asiento');
+Route::get('/editarAsiento/{id}', [AsientosContablesController::class, 'editar'])->name('edit.asiento');
+Route::put('/updateAsiento/{infoId}', [AsientosContablesController::class, 'update'])->name('update.asiento'); 
+Route::post('/asiento/store', [AsientosContablesController::class, 'store'])->name('store.asiento'); //API para guardar datos
+Route::post('/contabilizar-asientos', [AsientosContablesController::class, 'contabilizar'])->name('contabilizar.asientos');
